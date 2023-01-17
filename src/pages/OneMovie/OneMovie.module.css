@@ -1,0 +1,58 @@
+.MovieImg {
+    width: 200px;
+}
+
+.BoxMovie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+}
+
+.NameMovie {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.NameMovie h2 {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.VoteMovie {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.VoteMovie h3 {
+    margin-right: 5px;
+    
+}
+
+.OverviewMovie  {
+    font-weight: 600;
+    list-style-type: none;
+}
+.OverviewMovie p {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.GenresMovie {
+    font-weight: 600;
+    font-size: 14px;
+    list-style-type: none;
+}
+.GenresMovie span {
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.Information {
+    margin-left: 10px;
+}
+
+.ListInformationMovie {
+    margin-top: -50px;
+}
