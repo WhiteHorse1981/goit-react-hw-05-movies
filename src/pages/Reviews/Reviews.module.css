@@ -1,0 +1,12 @@
+.ReviewItem {
+    list-style-type: disc;
+}
+
+.ReviewAuthor {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ReviewContent {
+    font-size: 12px;
+}

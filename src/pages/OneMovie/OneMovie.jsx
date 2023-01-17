@@ -7,14 +7,15 @@ const OneMovie = ({ movie }) => {
   const {
     poster_path,
     title,
-    vote_count,
     overview,
     genres,
     release_date,
     first_air_date,
     name,
+    vote_average,
   } = movie;
   const date = new Date(release_date ? release_date : first_air_date);
+  const rating = Math.round(vote_average * 10);
   const year = date.getFullYear();
   const titleMovie = title ? title : name;
   const photo = poster_path
@@ -34,8 +35,8 @@ const OneMovie = ({ movie }) => {
               <p>( {year} )</p>
             </li>
             <li className={css.VoteMovie}>
-              <h3>Vote count:</h3>
-              <p>{vote_count}</p>
+              <h3>User Score: </h3>
+              <p>{rating}%</p>
             </li>
             <li className={css.OverviewMovie}>
               <h3>Overview</h3>

@@ -10,7 +10,7 @@ function CastPage() {
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const { movieId } = useParams();
-  console.log(movieId);
+  // console.log(movieId);
   useEffect(() => {
     if (!movieId) return;
 
@@ -19,7 +19,7 @@ function CastPage() {
         setIsLoading(true);
         const data = await movieAPI.getCastMovies(movieId);
         setCast(data.cast);
-        console.log(data.cast);
+        // console.log(data.cast);
       } catch (error) {
         setError(error.message);
       } finally {
