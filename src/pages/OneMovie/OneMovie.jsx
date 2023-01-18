@@ -1,9 +1,10 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import css from './OneMovie.module.css';
 import { nanoid } from 'nanoid';
 
 const OneMovie = ({ movie }) => {
+  const location = useLocation();
   const {
     poster_path,
     title,
@@ -58,10 +59,14 @@ const OneMovie = ({ movie }) => {
       <p className={css.Information}> Additional information</p>
       <ul>
         <li>
-          <NavLink to="cast">Cast</NavLink>
+          <NavLink state={{ from: location.state.from }} to="cast">
+            Cast
+          </NavLink>
         </li>
         <li>
-          <NavLink to="reviews">Reviews</NavLink>
+          <NavLink state={{ from: location.state.from }} to="reviews">
+            Reviews
+          </NavLink>
         </li>
       </ul>
 

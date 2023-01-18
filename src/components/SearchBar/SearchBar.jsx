@@ -1,7 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import css from './SearchBar.module.css';
-
-const { useState } = require('react');
+import React, { useState } from 'react';
 
 export const SearchBar = ({ onSubmit }) => {
   // eslint-disable-next-line no-unused-vars
