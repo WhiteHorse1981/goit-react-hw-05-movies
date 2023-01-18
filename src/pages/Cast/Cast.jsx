@@ -7,6 +7,7 @@ import css from './Cast.module.css';
 function CastPage() {
   const [cast, setCast] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const { movieId } = useParams();
   // console.log(movieId);
@@ -30,7 +31,6 @@ function CastPage() {
   }, [movieId]);
   return (
     <>
-      {error && <p>Server request failed. Try again.</p>}
       {cast && (
         <ul>
           {cast && (

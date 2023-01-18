@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid';
 
 function ReviewsPage() {
   const [reviews, setReviews] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const { movieId } = useParams();
 
@@ -30,7 +31,6 @@ function ReviewsPage() {
   }
   return (
     <>
-      {error && <p>Server request failed. Try again.</p>}
       <ul>
         {reviews.length > 0 ? (
           reviews.map(review => {

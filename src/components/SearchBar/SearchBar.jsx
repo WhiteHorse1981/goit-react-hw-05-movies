@@ -1,9 +1,13 @@
+import { useSearchParams } from 'react-router-dom';
 import css from './SearchBar.module.css';
 
 const { useState } = require('react');
 
 export const SearchBar = ({ onSubmit }) => {
-  const [query, setQuery] = useState('');
+  // eslint-disable-next-line no-unused-vars
+  const [searchParams, setSearchParams] = useSearchParams();
+  const params = searchParams.get('query');
+  const [query, setQuery] = useState(params ?? '');
   const hendleChange = e => {
     setQuery(e.target.value);
   };

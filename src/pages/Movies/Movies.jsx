@@ -8,6 +8,7 @@ import MovieList from 'components/MovieList/MovieList';
 function Movies() {
   const [isLoading, setIsLoading] = useState(false);
   const [searchedMovies, setSearchedMovies] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -26,6 +27,7 @@ function Movies() {
         const data = await movieAPI.getSearchMovies(params);
         setSearchedMovies(data.results);
       } catch (error) {
+        // console.log(error);
         setError(error.message);
       } finally {
         setIsLoading(false);
@@ -37,7 +39,9 @@ function Movies() {
   return (
     <>
       <SearchBar onSubmit={onSubmit} />
-      {error && <p>Server request failed. Try again.</p>}
+      {searchedMovies?.length === 0 && params && (
+        <p>Server request failed. Try again.</p>
+      )}
       {searchedMovies && <MovieList movies={searchedMovies} />}
       {isLoading && <Loader />}
     </>
