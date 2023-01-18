@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/866.7f38cac4.chunk.css","mappings":"AAAA,2BACI,oBACJ,CAEA,6BACI,cAAe,CACf,eACJ,CAEA,8BACI,cACJ","sources":["pages/Reviews/Reviews.module.css"],"sourcesContent":[".ReviewItem {\n    list-style-type: disc;\n}\n\n.ReviewAuthor {\n    font-size: 14px;\n    font-weight: 700;\n}\n\n.ReviewContent {\n    font-size: 12px;\n}"],"names":[],"sourceRoot":""}

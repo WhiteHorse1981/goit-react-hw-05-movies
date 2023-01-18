@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/729.93515e91.chunk.css","mappings":"AAAA,8BACI,gBACJ","sources":["components/SearchBar/SearchBar.module.css"],"sourcesContent":[".SearchForm {\n    margin-left: 10px;\n}"],"names":[],"sourceRoot":""}
