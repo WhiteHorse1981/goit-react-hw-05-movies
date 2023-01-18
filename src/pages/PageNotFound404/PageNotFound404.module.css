@@ -1,0 +1,12 @@
+.PageNotFound {
+    font-size: 150px;
+    margin: 0;
+
+}
+
+.BoxPageNotFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

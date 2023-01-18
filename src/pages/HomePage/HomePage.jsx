@@ -1,13 +1,12 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import css from './HomePage.module.css';
 import * as movieAPI from '../../services/api';
 import { Loader } from 'components/Loader/Loader';
+import MovieList from 'components/MovieList/MovieList';
 
 function HomePage() {
   const [movies, setMovies] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -26,18 +25,9 @@ function HomePage() {
   }, []);
   return (
     <>
+      {error && <p>Server request failed. Try again.</p>}
       <h2 className={css.Title}>Trending today</h2>
-      {movies && (
-        <ul className={css.ListMovies}>
-          {movies.map(movie => (
-            <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`}>
-                {movie.name ? movie.name : movie.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      {movies && <MovieList movies={movies} />}
       {isLoading && <Loader />}
     </>
   );

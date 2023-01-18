@@ -1,13 +1,13 @@
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { SearchBar } from 'components/SearchBar/SearchBar';
 import React, { useEffect, useState } from 'react';
 import * as movieAPI from '../../services/api';
 import { Loader } from 'components/Loader/Loader';
+import MovieList from 'components/MovieList/MovieList';
 
 function Movies() {
   const [isLoading, setIsLoading] = useState(false);
   const [searchedMovies, setSearchedMovies] = useState(null);
-  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -37,17 +37,8 @@ function Movies() {
   return (
     <>
       <SearchBar onSubmit={onSubmit} />
-      {searchedMovies && (
-        <ul>
-          {searchedMovies.map(movie => (
-            <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`}>
-                {movie.name ? movie.name : movie.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      {error && <p>Server request failed. Try again.</p>}
+      {searchedMovies && <MovieList movies={searchedMovies} />}
       {isLoading && <Loader />}
     </>
   );

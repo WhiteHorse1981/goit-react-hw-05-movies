@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import * as movieAPI from '../../services/api';
 import { Loader } from 'components/Loader/Loader';
 import OneMovie from '../OneMovie/OneMovie';
+import GoBack from 'components/GoBack/GoBack';
 
 function MovieDetails() {
   const [movie, setMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const { movieId } = useParams();
 
@@ -31,6 +31,8 @@ function MovieDetails() {
   }, [movieId]);
   return (
     <>
+      <GoBack />
+      {error && <p>Server request failed. Try again.</p>}
       {(movie !== null && <OneMovie movie={movie} />) || (
         <p>Unfortunately there is no information about this film.</p>
       )}
