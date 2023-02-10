@@ -61,7 +61,9 @@ const OneMovie = ({ movie }) => {
       <ul className={css.ListAdditional}>
         <li>
           <NavLink
-            className={css.LinkAdditional}
+            className={({ isActive }) =>
+              isActive ? css.LinkAdditionalActive : css.LinkAdditional
+            }
             state={{ from: location.state.from }}
             to="cast"
           >
@@ -70,7 +72,9 @@ const OneMovie = ({ movie }) => {
         </li>
         <li>
           <NavLink
-            className={css.LinkAdditional}
+            className={({ isActive }) =>
+              isActive ? css.LinkAdditionalActive : css.LinkAdditional
+            }
             state={{ from: location.state.from }}
             to="reviews"
           >
