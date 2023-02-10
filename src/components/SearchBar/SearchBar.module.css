@@ -1,3 +1,48 @@
 .SearchForm {
-    margin-left: 10px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 15px 0;
+    max-width: 450px;
+    padding: 5px 10px 5px 40px;
+}
+
+.InputSearchBar {
+    background-color: #F1F3F4;
+    border: 2px solid #d3b5e5;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 300px;
+    outline: none;
+    padding: 8px 18px;
+    transition: all .15s linear;
+}
+.InputSearchBar:focus {
+    border-color: #4D2EE9;
+    transition: all .15s linear;
+}
+
+.BtnForm {
+    align-items: center;
+    background-color: #a95bd6;
+    border: none;
+    border-radius: 4px;
+    color: #f9f1f0;
+    -webkit-column-gap: 5px;
+    column-gap: 5px;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all .1s linear;
+}
+
+.BtnForm:hover {
+    color: #4D2EE9;
+    background-color: #E5D0EF;
+    transition: all .1s linear;
 }

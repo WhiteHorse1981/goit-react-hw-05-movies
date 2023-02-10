@@ -1,0 +1,16 @@
+.BtnGoBack {
+    background-color: #D39BE9;
+    border-radius: 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+    margin-left: 15px;
+    color: black;
+    font-weight: 500;
+    transition: all .1s linear;
+}
+
+.BtnGoBack:hover, .BtnGoBack:focus {
+    color: #4D2EE9;
+    background-color: #E5D0EF;
+    transition: all .1s linear;
+}

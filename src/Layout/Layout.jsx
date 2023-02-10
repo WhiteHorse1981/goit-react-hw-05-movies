@@ -6,7 +6,7 @@ export const Layout = ({ children }) => {
   return (
     <div className={css.App}>
       <header className={css.Header}>
-        <nav>
+        <nav className={css.Nav}>
           <NavLink
             className={({ isActive }) =>
               isActive ? css.NavLinkActive : css.NavLink

@@ -15,11 +15,18 @@ export const SearchBar = ({ onSubmit }) => {
     onSubmit(query);
   };
   return (
-    <div>
+    <section>
       <form className={css.SearchForm} onSubmit={handlerFormSubmit}>
-        <input type="text" value={query} onChange={hendleChange} />
-        <button type="submit">Search</button>
+        <input
+          className={css.InputSearchBar}
+          type="text"
+          value={query}
+          onChange={hendleChange}
+        />
+        <button className={css.BtnForm} type="submit">
+          Search
+        </button>
       </form>
-    </div>
+    </section>
   );
 };

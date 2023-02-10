@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import css from './HomePage.module.css';
 import * as movieAPI from '../../services/api';
 import { Loader } from 'components/Loader/Loader';
 import MovieList from 'components/MovieList/MovieList';
@@ -26,7 +25,6 @@ function HomePage() {
   return (
     <>
       {error && <p>Server request failed. Try again.</p>}
-      <h2 className={css.Title}>Trending today</h2>
       {movies && <MovieList movies={movies} />}
       {isLoading && <Loader />}
     </>

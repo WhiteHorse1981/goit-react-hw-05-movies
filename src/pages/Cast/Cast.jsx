@@ -10,7 +10,6 @@ function CastPage() {
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const { movieId } = useParams();
-  // console.log(movieId);
   useEffect(() => {
     if (!movieId) return;
 
@@ -19,7 +18,6 @@ function CastPage() {
         setIsLoading(true);
         const data = await movieAPI.getCastMovies(movieId);
         setCast(data.cast);
-        // console.log(data.cast);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -32,9 +30,9 @@ function CastPage() {
   return (
     <>
       {cast && (
-        <ul>
+        <section>
           {cast && (
-            <ul>
+            <ul className={css.CastList}>
               {cast.map(role => {
                 const photo = role.profile_path
                   ? `https://image.tmdb.org/t/p/w500${role.profile_path}`
@@ -50,7 +48,7 @@ function CastPage() {
               })}
             </ul>
           )}
-        </ul>
+        </section>
       )}
       {isLoading && <Loader />}
     </>

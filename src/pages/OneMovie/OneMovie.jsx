@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid';
 
 const OneMovie = ({ movie }) => {
   const location = useLocation();
+
   const {
     poster_path,
     title,
@@ -24,12 +25,12 @@ const OneMovie = ({ movie }) => {
     : 'https://nuft.edu.ua/assets/images/people/no-image.jpg';
 
   return (
-    <>
+    <section className={css.SectionList}>
       <div className={css.BoxMovie}>
         <div>
           <img src={photo} alt={titleMovie} className={css.MovieImg} />
         </div>
-        <div>
+        <div className={css.BoxList}>
           <ul className={css.ListInformationMovie}>
             <li className={css.NameMovie}>
               <h2>{titleMovie}</h2>
@@ -57,21 +58,29 @@ const OneMovie = ({ movie }) => {
       <hr />
 
       <p className={css.Information}> Additional information</p>
-      <ul>
+      <ul className={css.ListAdditional}>
         <li>
-          <NavLink state={{ from: location.state.from }} to="cast">
+          <NavLink
+            className={css.LinkAdditional}
+            state={{ from: location.state.from }}
+            to="cast"
+          >
             Cast
           </NavLink>
         </li>
         <li>
-          <NavLink state={{ from: location.state.from }} to="reviews">
+          <NavLink
+            className={css.LinkAdditional}
+            state={{ from: location.state.from }}
+            to="reviews"
+          >
             Reviews
           </NavLink>
         </li>
       </ul>
 
       <Outlet />
-    </>
+    </section>
   );
 };
 

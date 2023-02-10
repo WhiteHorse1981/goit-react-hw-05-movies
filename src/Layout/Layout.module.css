@@ -1,18 +1,37 @@
 .NavLink {
-    margin-left: 15px;
     text-decoration: none;
     color: #010101;
+    padding: 3px 18px;
+}
+
+.NavLink:hover, .NavLink:focus {
+    color:blue;
 }
 
 .NavLinkActive {
-    margin-left: 15px;
-    text-decoration: none;
-    color: red;
+    border-radius: 10px;
+    background-color: rgba(241, 243, 244, 0.6);;
+    padding: 3px 18px;
+    text-decoration: none;  
+    color: #4D2EE9;
+    transition: all .1s linear;
 }
 
 .Header {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    background-color: #D39BE9;
+}
+
+.Nav {
+    column-gap: 35px;
+    display: flex;
+    padding: 5px 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.App {
+    height: 100vh;
 }
