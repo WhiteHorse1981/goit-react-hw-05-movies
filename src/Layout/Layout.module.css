@@ -1,4 +1,7 @@
 .NavLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     text-decoration: none;
     color: #010101;
     padding: 3px 18px;
@@ -9,6 +12,9 @@
 }
 
 .NavLinkActive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     border-radius: 10px;
     background-color: rgba(241, 243, 244, 0.6);;
     padding: 3px 18px;
