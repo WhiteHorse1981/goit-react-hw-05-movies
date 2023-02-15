@@ -2,12 +2,14 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from 'Layout/Layout';
 import { lazy, Suspense } from 'react';
 import { Loader } from 'components/Loader/Loader';
+// import VideoPage from 'pages/Video/Video';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const Movies = lazy(() => import('pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const CastPage = lazy(() => import('pages/Cast/Cast'));
 const ReviewsPage = lazy(() => import('pages/Reviews/Reviews'));
+const VideoPage = lazy(() => import('pages/Video/Video'));
 const PageNotFound404 = lazy(() =>
   import('pages/PageNotFound404/PageNotFound404')
 );
@@ -23,6 +25,7 @@ export const App = () => {
           <Route path="/movies/:movieId" element={<MovieDetails />}>
             <Route path="cast" element={<CastPage />} />
             <Route path="reviews" element={<ReviewsPage />} />
+            <Route path="video" element={<VideoPage />} />
           </Route>
 
           <Route path="*" element={<PageNotFound404 />} />

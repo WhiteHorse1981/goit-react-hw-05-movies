@@ -55,3 +55,14 @@ export const getReviewsMovies = async movieId => {
   });
   return data;
 };
+
+export const getVideoMovies = async movieId => {
+  const { data } = await themoviedbApi.get(`movie/${movieId}/videos`, {
+    params: {
+      language: 'en-US',
+      page: 1,
+    },
+    //https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US
+  });
+  return data;
+};

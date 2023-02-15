@@ -29,13 +29,16 @@ function MovieDetails() {
 
     fetchMovie();
   }, [movieId]);
+
   return (
     <>
       <GoBack />
+
       {error && <p>Server request failed. Try again.</p>}
       {(movie !== null && <OneMovie movie={movie} />) || (
         <p>Unfortunately there is no information about this film.</p>
       )}
+
       {isLoading && <Loader />}
     </>
   );

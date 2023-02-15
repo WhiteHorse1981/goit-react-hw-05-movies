@@ -81,6 +81,17 @@ const OneMovie = ({ movie }) => {
             Reviews
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? css.LinkAdditionalActive : css.LinkAdditional
+            }
+            state={{ from: location.state.from }}
+            to="video"
+          >
+            Video
+          </NavLink>
+        </li>
       </ul>
 
       <Outlet />

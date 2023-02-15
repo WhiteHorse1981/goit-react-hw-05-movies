@@ -1,0 +1,12 @@
+.VideoList {
+    list-style: none;
+    text-align: center;
+    width: 90%;
+    grid-gap: 2vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
