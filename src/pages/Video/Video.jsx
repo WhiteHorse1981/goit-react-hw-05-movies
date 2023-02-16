@@ -39,8 +39,8 @@ function VideoPage() {
             return (
               <li key={nanoid()}>
                 <iframe
-                  width="450"
-                  height="315"
+                  width="300"
+                  height="200"
                   src={urlVideo}
                   title={name}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
